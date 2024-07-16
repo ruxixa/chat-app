@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chat App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="static/loginData.mjs" defer></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+    <div class="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 rounded-lg">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-300">Login to the app</h1>
+        <form id="login-form">
+            <div class="mb-4">
+                <label for="username" class="block text-gray-400 mb-2">Username</label>
+                <input type="text" id="username" name="username" class="w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none">
+                <span id="usernameError" class="error"></span>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-400 mb-2">Password</label>
+                <input type="password" id="password" name="password" class="w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none">
+                <span id="passwordError" class="error"></span>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+                <a href="#" class="text-sm text-blue-500 hover:text-blue-700">Forgot password?</a>
+            </div>
+            <button type="submit" class="w-full h-12 bg-blue-600 hover:bg-blue-700 rounded-lg text-gray-200 font-semibold">Login</button>
+        </form>
+    </div>
+</body>
+</html>
