@@ -1,8 +1,29 @@
+/**
+ * @file db.js
+ * 
+ * @brief This file contains the JavaScript modules
+ * for the database management
+ * 
+ * @license MIT
+ * @author ruxixa
+ * @copyright 2024
+ */
 const mysql = require("mysql2");
 const appConfig = require("../../appConfig.json");
 
+/**
+ * @class Database
+ * @classdesc Class containing the database management
+ */
 class Database {
+  // Database connection; initialized as null
   static connection = null;
+
+  /**
+   * @brief Connects to the database
+   * 
+   * @returns {void}
+   */
   static connect() {
     Database.connection = mysql.createConnection({
       host: appConfig.db.host,
@@ -19,7 +40,16 @@ class Database {
       console.log("Connected to MySQL. ID: " + Database.connection.threadId);
     });
   }
-
+  
+  /**
+   * @brief Executes a query
+   * 
+   * @param {string} sql The SQL query
+   * @param {Array} params The query parameters
+   * @param {Function} callback The callback function
+   * 
+   * @returns {void}
+   */
   static query(sql, params, callback) {
     if (!Database.connection) {
       console.error("No database connection.");
@@ -36,6 +66,14 @@ class Database {
     });
   }
 
+  /**
+   * @brief Ends the database connection
+   * 
+   * @note This function is not used in the current version 
+   * of the application
+   * 
+   * @returns {void}
+   */
   static end() {
     if (!Database.connection) {
       console.error("No database connection.");

@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat App</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css"/>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="static/fetchItems.mjs" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <script type="module" src="static/users.mjs" defer></script>
 </head>
 <body class="bg-gray-900 text-white flex flex-col h-screen" style="overflow: hidden;">
-    <!-- <div class="window-bar flex items-center justify-end bg-gray-900 h-12 px-4 border-b border-gray-800" style="min-height: 40px;">
-        <div class="flex items-center space-x-4">
-            <div class="flex items-center" style="display: flex;">
-                <div class="flex items-center">
-                    <div class="circle green"></div>
-                    <div class="circle yellow"></div>
-                    <div class="circle red"></div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <div class="flex bg-gray-900 text-white flex-1">
-        <div class="users-container flex-1 bg-gray-900 overflow-y-auto" style="flex: 20%; padding: 20px; min-width: 300px;">
-            <div class="relative mb-4">
-                <input type="text" placeholder="Search by username" class="w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none">
-                <button class="absolute right-0 top-0 mt-2 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-gray-400 hover:text-gray-300">
-                        <circle cx="11" cy="11" r="6"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="messages-container-box flex flex-col" style="flex: 80%;">
-            <div class="bg-gray-800 flex-1 overflow-y-auto" style="flex: 12; overflow: hidden;">
-                <div class="messages-container flex flex-col">
-
-                </div>
-            </div>
-            <div class="h-12 flex items-center bg-gray-800 px-6" style="flex: 1;">
-                <input type="text" placeholder="Your message goes here" class="message-input w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none">
-                <button class="message-send-button ml-2 h-10 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 focus:outline-none text-gray-200">send</button>
-            </div>
-        </div>
-    </div>  
+  <div class="flex bg-gray-900 text-white flex-1">
+    <div class="users-container flex-1 bg-gray-900 overflow-y-auto" style="flex: 20%; padding: 20px; min-width: 300px;">
+      <div class="relative mb-4">
+        <input 
+          type="text" 
+          placeholder="Search by username" 
+          class="w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none"
+        >
+        <button class="absolute right-0 top-0 mt-2 mr-3">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="h-6 w-6 text-gray-400 hover:text-gray-300"
+          >
+            <circle cx="11" cy="11" r="6"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="messages-container-box flex flex-col" style="flex: 80%;">
+      <div class="bg-gray-800 flex-1 overflow-y-auto" style="flex: 12; overflow: hidden;">
+         <div class="messages-container flex flex-col"> <!-- ... --> </div> 
+      </div>
+      <div class="h-12 flex items-center bg-gray-800 px-6" style="flex: 1;">
+        <input 
+          type="text" 
+          placeholder="Your message goes here" 
+          class="message-input w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none">
+        <button class="message-send-button ml-2 h-10 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 focus:outline-none text-gray-200">send</button>
+      </div>
+    </div>
+  </div>  
 </body>
 </html>
