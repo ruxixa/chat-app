@@ -2,9 +2,32 @@
   color: #4b5563;
 }
 
+body {
+  overflow: hidden;
+}
+
 input:focus {
   outline: none;
   box-shadow: none;
+}
+
+.users-container {
+  flex: 20%; 
+  padding: 20px; 
+  min-width: 300px;
+}
+
+.messages-container-items {
+  flex: 12; 
+  overflow: hidden;
+}
+
+.messages-container-box {
+  flex: 80%;
+}
+
+.message-input-container {
+  flex: 1;
 }
 
 .users-container,
@@ -61,6 +84,8 @@ input:focus {
   margin-top: 0.25rem;
 }
 
+
+/* TODO: Make the chat responsive */
 @media screen and (max-width: 768px) {
   .user-container {
     flex: 100%;

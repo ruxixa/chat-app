@@ -10,9 +10,9 @@
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <script type="module" src="static/users.mjs" defer></script>
 </head>
-<body class="bg-gray-900 text-white flex flex-col h-screen" style="overflow: hidden;">
+<body class="bg-gray-900 text-white flex flex-col h-screen">
   <div class="flex bg-gray-900 text-white flex-1">
-    <div class="users-container flex-1 bg-gray-900 overflow-y-auto" style="flex: 20%; padding: 20px; min-width: 300px;">
+    <div class="users-container flex-1 bg-gray-900 overflow-y-auto">
       <div class="relative mb-4">
         <input 
           type="text" 
@@ -36,16 +36,20 @@
         </button>
       </div>
     </div>
-    <div class="messages-container-box flex flex-col" style="flex: 80%;">
-      <div class="bg-gray-800 flex-1 overflow-y-auto" style="flex: 12; overflow: hidden;">
+    <div class="messages-container-box flex flex-col">
+      <div class="messages-container-items bg-gray-800 flex-1 overflow-y-auto">
          <div class="messages-container flex flex-col"> <!-- ... --> </div> 
       </div>
-      <div class="h-12 flex items-center bg-gray-800 px-6" style="flex: 1;">
+      <div class="message-input-container h-12 flex items-center bg-gray-800 px-6"></div>
         <input 
           type="text" 
           placeholder="Your message goes here" 
-          class="message-input w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none">
-        <button class="message-send-button ml-2 h-10 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 focus:outline-none text-gray-200">send</button>
+          class="message-input w-full bg-gray-800 text-gray-400 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none"
+          >
+        <button 
+          class="message-send-button ml-2 h-10 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 focus:outline-none text-gray-200">
+          send
+        </button>
       </div>
     </div>
   </div>  
